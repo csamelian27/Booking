@@ -1,9 +1,7 @@
 //*= require simple_calendar */
 
-@import "./listings.scss"
-@import "./bookings.scss"
-@import "./users.scss"
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Roboto|Comfortaa');
+
 
 .carousel-inner .item img {
   display: block;
@@ -39,13 +37,27 @@ footer {
   background-color: rgb(204, 221, 255);
 }
 
-a.right-side {
-  position: right;
+a {
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
   color: #002b80;
+  font-family: 'Montserrat', sans-serif;
 }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+}
+
+h4 {
+ font-family: 'Comfortaa', cursive; 
+}
+
 
 .slogan {
   max-height: 30px;
@@ -57,7 +69,6 @@ h1 {
 
 a.bklink {
   color: rgba(0,0,0,.5);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
 }
 
