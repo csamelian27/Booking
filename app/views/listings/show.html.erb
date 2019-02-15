@@ -15,14 +15,12 @@
     <% end %>
       <header>
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="position:absolute">
-          <div class="container">
-            <a class="logo navbar-brand" href="<%= welcome_1_path %>"><img src="/images/BestBookingTransparent.jpg" style="max-height: 50px;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <nav class="navbar navbar-expand-md fixed-top position: absolute; z-index: 5">
+          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
               <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="logo navbar-brand" href="<%= welcome_1_path %>"><img src="/images/BestBookingTransparent.jpg" style="max-height: 50px;"></a>
+                </li>
                 <% if !session[:user_id] %>
                 <li class="nav-item active">
                   <a class="nav-link-1" <%= link_to "Listings", listings_path %></a>
@@ -42,14 +40,13 @@
                 </li>
                 <% end %>
               </ul>
-              <form class="form-inline">
-                <!-- <div class="md-form my-0">
-                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </div> -->
-                <!-- <li class="nav-item"> -->
-                  <a class="nav-link text-align-right blue" <%= link_to "Sign Out", logout_path, method: :delete %></a>
-                <!-- </li> -->
-              </form>
+              <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-align-right" <%= link_to "Sign Out", logout_path, method: :delete %></a>
+                    </li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>

@@ -1,20 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome</title>
-</head>
-<body>
-<h2> Welcome!</h2>
+ <div class="view" style="background-image: url('https://i.pinimg.com/originals/60/a8/f3/60a8f36d5a3462f11dd35a8c5370b972.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; opacity: 0.90;">
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light align-items-center">
+            <!-- Content -->
+            <div class="container">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12 mb-4 white-text text-center">
+                  <br>
+                  <br>
+                  <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>All Listings</strong></h1>
+                  <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+                </div>
 
-<div class:"navbar">
-  <%= link_to "Log In", "/login" %><br>
-  <%= link_to "Sign Up", new_user_path %><br>
-  <%= link_to "Log Out", "/logout", method: :delete %><br>
-  <%# link_to "View Listings", listings_path %>
-</div>
-	
-</body>
-</html>
+                <div class="container text-center">
+                  <h6>Where would you like to stay?</h6>
+                </div>
+
+                <br>
+
+                <!-- <div class="col-3">
+
+                </div> -->
+
+                 <div class="row justify-content-center">
+                    <div class="col-5 text-center" style="margin-left:100%;">
+                     <% @listings.each do |l| %>
+                		  <p><%= link_to l.location, listing_path(l) %></p>
+                		<% end %>
+                    </div>
+                    <!-- <div class="col-3">
+
+                    </div> -->
+                  </div>
+
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Content -->
+          </div>
+          <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+      
+      <!-- Main navigation -->
+      <!--Main Layout-->
