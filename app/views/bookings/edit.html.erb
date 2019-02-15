@@ -7,17 +7,7 @@
 	<title>Edit Booking</title>
 </head>
 <body>
-    <% if flash[:error] %>
-      <% flash[:error].each do |error| %>
-        <li style="color:red"><%= error %></li>
-      <% end %>
-    <% end %>
 
-    <% if flash[:notice] %>
-      <% flash[:notice].each do |notice| %>
-          <li style="color:red"><%= notice %></li>
-      <% end %>
-    <% end %>
       <header>
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="position:absolute">
@@ -69,6 +59,17 @@
                      <h4><%= @booking.listing.location %></h4>
                        <div class="container text-center">
                          <%= form_for @booking do |f| %>
+                         
+                            <% if flash[:error] %>
+                              <% flash[:error].each do |error| %>
+                                <li style="color:red"><%= error %></li>
+                              <% end %>
+                            <% end %>
+
+                            <% if flash[:notice] %>
+                              <p style="color:red"><%= flash[:notice] %></p>
+                            <% end %>
+
                           <%= f.label :start_date %>
                           <%= f.date_field :temp_start, min: Date.today %><br><br>
 
